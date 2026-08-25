@@ -1,417 +1,406 @@
+```html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>F1 Racing - Blog de Fórmula 1</title>
+    <title>Fórmula 1</title>
 
     <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #eeeeee;
-            color: #222222;
+            background-color: #f2f2f2;
+            color: #222;
         }
-
-        /* CABEÇALHO */
 
         header {
-            background-color: #111111;
-            padding: 20px;
-        }
-
-        .menu {
-            max-width: 1000px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
+            background-color: #151515;
             color: white;
-            font-size: 26px;
-            font-weight: bold;
+            text-align: center;
+            padding: 35px 20px;
         }
 
-        .logo span {
-            color: #e10600;
+        header h1 {
+            margin: 0;
+            font-size: 45px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #d90429;
+            text-align: center;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
-        }
-
-        nav a:hover {
-            color: #e10600;
-        }
-
-        /* BANNER */
-
-        .banner {
-            background-color: #e10600;
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
-
-        .banner h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 18px;
-        }
-
-        /* CONTEÚDO */
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .titulo {
-            border-left: 5px solid #e10600;
-            padding-left: 10px;
-            margin-bottom: 25px;
-        }
-
-        /* NOTÍCIAS */
-
-        .noticias {
-            display: flex;
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            width: 33.33%;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px #cccccc;
-        }
-
-        .foto {
-            height: 160px;
-            background-color: #222222;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 55px;
-        }
-
-        .card-conteudo {
-            padding: 20px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #555555;
-            line-height: 1.5;
-        }
-
-        /* SOBRE */
-
-        .sobre {
-            background-color: white;
-            padding: 30px;
-            margin-top: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px #cccccc;
-        }
-
-        .sobre h2 {
-            margin-bottom: 15px;
-        }
-
-        .sobre p {
-            color: #555555;
-            line-height: 1.6;
-        }
-
-        /* EQUIPES */
-
-        .equipes {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .equipe {
-            flex: 1;
-            background-color: #111111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            border-radius: 6px;
+            margin: 0 15px;
             font-weight: bold;
         }
 
-        /* RODAPÉ */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #d90429;
+        }
+
+        .imagem-principal {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .pilotos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .piloto {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .piloto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .piloto-conteudo {
+            padding: 18px;
+        }
+
+        .piloto h3 {
+            color: #d90429;
+            margin-top: 0;
+        }
+
+        .curiosidades {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .curiosidade {
+            background-color: #fff4f5;
+            border-left: 5px solid #d90429;
+            padding: 18px;
+            flex: 1;
+            min-width: 220px;
+            border-radius: 8px;
+        }
+
+        .curiosidade h3 {
+            color: #d90429;
+        }
+
+        .equipes {
+            line-height: 1.8;
+        }
 
         footer {
-            background-color: #111111;
+            background-color: #151515;
             color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 50px;
+            padding: 20px;
+            margin-top: 30px;
         }
-
-        /* CELULAR */
-
-        @media (max-width: 700px) {
-
-            .menu {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 5px;
-            }
-
-            .banner h1 {
-                font-size: 38px;
-            }
-
-            .noticias {
-                flex-direction: column;
-            }
-
-            .card {
-                width: 100%;
-            }
-
-            .equipes {
-                flex-direction: column;
-            }
-
-        }
-
     </style>
-
 </head>
 
 <body>
 
-    <!-- MENU -->
-
     <header>
-
-        <div class="menu">
-
-            <div class="logo">
-                F1 <span>RACING</span>
-            </div>
-
-            <nav>
-
-                <a href="#inicio">Início</a>
-
-                <a href="#noticias">Notícias</a>
-
-                <a href="#equipes">Equipes</a>
-
-                <a href="#sobre">Sobre</a>
-
-            </nav>
-
-        </div>
-
+        <h1>🏎️ Fórmula 1</h1>
+        <p>Velocidade, tecnologia e competição</p>
     </header>
 
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#pilotos">Pilotos</a>
+        <a href="#equipes">Equipes</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#historia">História</a>
+    </nav>
 
-    <!-- BANNER -->
+    <main>
 
-    <section class="banner" id="inicio">
+        <section id="inicio">
 
-        <h1>FÓRMULA 1</h1>
+            <h2>O que é a Fórmula 1?</h2>
 
-        <p>
-            Velocidade, tecnologia e competição.
-        </p>
-
-    </section>
-
-
-    <!-- NOTÍCIAS -->
-
-    <main class="container" id="noticias">
-
-        <h2 class="titulo">
-            Notícias do Automobilismo
-        </h2>
-
-
-        <div class="noticias">
-
-
-            <div class="card">
-
-                <div class="foto">
-                    🏎️
-                </div>
-
-                <div class="card-conteudo">
-
-                    <h3>
-                        A Fórmula 1
-                    </h3>
-
-                    <p>
-                        A Fórmula 1 é uma das principais categorias
-                        do automobilismo mundial e reúne pilotos e
-                        equipes de diferentes países.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="foto">
-                    🏁
-                </div>
-
-                <div class="card-conteudo">
-
-                    <h3>
-                        As pistas
-                    </h3>
-
-                    <p>
-                        Os Grandes Prêmios acontecem em circuitos
-                        famosos como Monza, Silverstone, Suzuka e
-                        Interlagos.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="foto">
-                    ⚙️
-                </div>
-
-                <div class="card-conteudo">
-
-                    <h3>
-                        Tecnologia
-                    </h3>
-
-                    <p>
-                        Os carros utilizam tecnologias avançadas
-                        para melhorar o desempenho, a segurança
-                        e a eficiência.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- SOBRE -->
-
-        <section class="sobre" id="sobre">
-
-            <h2>
-                Sobre a Fórmula 1
-            </h2>
+            <img
+                class="imagem-principal"
+                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80"
+                alt="Carro esportivo">
 
             <p>
-                A Fórmula 1 é uma categoria de automobilismo
-                conhecida por seus carros de alta velocidade,
-                tecnologia avançada e grandes disputas entre
-                pilotos e equipes.
+                A Fórmula 1 é a principal categoria do automobilismo
+                internacional. O campeonato reúne pilotos e equipes que
+                competem em diferentes circuitos ao redor do mundo.
             </p>
 
-            <br>
-
             <p>
-                Durante uma temporada, os pilotos participam
-                de diversas corridas. Os resultados de cada
-                corrida geram pontos para os campeonatos de
-                pilotos e construtores.
+                Além da velocidade, a F1 envolve engenharia, estratégia,
+                aerodinâmica, tecnologia e trabalho em equipe.
             </p>
 
         </section>
 
+        <section id="pilotos">
 
-        <!-- EQUIPES -->
+            <h2>🏁 Pilotos de destaque</h2>
 
-        <section class="sobre" id="equipes">
+            <div class="pilotos">
 
-            <h2>
-                Equipes conhecidas
-            </h2>
+                <div class="piloto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=800&q=80"
+                        alt="Carro de corrida">
+
+                    <div class="piloto-conteudo">
+
+                        <h3>Lewis Hamilton</h3>
+
+                        <p>
+                            Um dos maiores campeões da história da Fórmula 1,
+                            com sete títulos mundiais.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="piloto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1541443131876-44b03de101c5?auto=format&fit=crop&w=800&q=80"
+                        alt="Carro de corrida em pista">
+
+                    <div class="piloto-conteudo">
+
+                        <h3>Max Verstappen</h3>
+
+                        <p>
+                            Piloto conhecido por seu estilo agressivo e por
+                            conquistar vários campeonatos na era moderna.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="piloto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                        alt="Carro esportivo">
+
+                    <div class="piloto-conteudo">
+
+                        <h3>Fernando Alonso</h3>
+
+                        <p>
+                            Bicampeão mundial e um dos pilotos mais experientes
+                            do grid da Fórmula 1.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="equipes">
+
+            <h2>🏎️ Equipes da Fórmula 1</h2>
+
+            <p>
+                Na temporada de 2026, a Fórmula 1 conta com 11 equipes e
+                22 pilotos. A entrada da Cadillac aumentou o grid para
+                22 carros.
+            </p>
 
             <div class="equipes">
 
-                <div class="equipe">
-                    Ferrari
+                <p>🔴 Ferrari</p>
+                <p>⚫ Mercedes</p>
+                <p>🟠 McLaren</p>
+                <p>🔵 Red Bull Racing</p>
+                <p>🟢 Aston Martin</p>
+                <p>🔵 Alpine</p>
+                <p>⚪ Williams</p>
+                <p>⚫ Haas</p>
+                <p>🟢 Racing Bulls</p>
+                <p>⚫ Audi</p>
+                <p>🔵 Cadillac</p>
+
+            </div>
+
+        </section>
+
+        <section id="curiosidades">
+
+            <h2>🔎 Curiosidades sobre a F1</h2>
+
+            <div class="curiosidades">
+
+                <div class="curiosidade">
+
+                    <h3>🏁 Primeira temporada</h3>
+
+                    <p>
+                        O Campeonato Mundial de Fórmula 1 começou em 1950.
+                        A primeira corrida aconteceu em Silverstone,
+                        no Reino Unido.
+                    </p>
+
                 </div>
 
-                <div class="equipe">
-                    McLaren
+                <div class="curiosidade">
+
+                    <h3>⚡ Velocidade</h3>
+
+                    <p>
+                        Os carros de F1 podem ultrapassar 370 km/h em
+                        determinadas situações e circuitos.
+                    </p>
+
                 </div>
 
-                <div class="equipe">
-                    Mercedes
+                <div class="curiosidade">
+
+                    <h3>🔧 Pit stop</h3>
+
+                    <p>
+                        Uma equipe pode trocar os quatro pneus de um carro
+                        em menos de dois segundos durante um pit stop.
+                    </p>
+
                 </div>
 
-                <div class="equipe">
-                    Red Bull
+                <div class="curiosidade">
+
+                    <h3>🏆 Ferrari</h3>
+
+                    <p>
+                        A Ferrari é a única equipe que participou de todas
+                        as temporadas da Fórmula 1 desde 1950.
+                    </p>
+
+                </div>
+
+                <div class="curiosidade">
+
+                    <h3>🇧🇷 Ayrton Senna</h3>
+
+                    <p>
+                        Ayrton Senna conquistou três campeonatos mundiais
+                        e se tornou um dos maiores ícones da história
+                        da Fórmula 1.
+                    </p>
+
+                </div>
+
+                <div class="curiosidade">
+
+                    <h3>🌎 Corridas pelo mundo</h3>
+
+                    <p>
+                        A Fórmula 1 realiza corridas em diferentes países
+                        e continentes, tornando o campeonato um dos
+                        eventos esportivos mais internacionais do mundo.
+                    </p>
+
                 </div>
 
             </div>
 
         </section>
 
+        <section id="historia">
+
+            <h2>📖 História da Fórmula 1</h2>
+
+            <p>
+                A Fórmula 1 foi oficialmente criada como Campeonato Mundial
+                em 1950. A primeira temporada teve sete etapas e terminou
+                com Giuseppe "Nino" Farina como primeiro campeão mundial.
+               
+            </p>
+
+            <p>
+                Ao longo das décadas, a categoria passou por grandes
+                transformações. Os carros ficaram mais rápidos e seguros,
+                enquanto novas tecnologias foram introduzidas.
+            </p>
+
+            <p>
+                Grandes pilotos como Juan Manuel Fangio, Jim Clark,
+                Ayrton Senna, Alain Prost, Michael Schumacher e Lewis Hamilton
+                ajudaram a construir a história da categoria.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>🏆 Por que a F1 é tão especial?</h2>
+
+            <p>
+                A Fórmula 1 combina esporte e tecnologia. Cada equipe
+                trabalha constantemente para desenvolver um carro mais
+                eficiente, enquanto os pilotos precisam tomar decisões
+                rápidas durante as corridas.
+            </p>
+
+            <p>
+                Por isso, vencer uma corrida depende não apenas do piloto,
+                mas também da engenharia, estratégia, mecânicos e de toda
+                a equipe.
+            </p>
+
+        </section>
 
     </main>
 
-
-    <!-- RODAPÉ -->
-
     <footer>
 
-        <p>
-            F1 Racing
-        </p>
-
-        <p>
-            Projeto escolar sobre Fórmula 1
-        </p>
+        <p>🏁 Site sobre Fórmula 1 - Trabalho escolar</p>
 
     </footer>
-
 
 </body>
 
 </html>
+```
