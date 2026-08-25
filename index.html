@@ -1,102 +1,87 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechVision - Blog de Tecnologia</title>
+    <title>TechVision - Tecnologia</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #f4f7fb;
-            color: #172033;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #17202a;
         }
 
         header {
-            background: #101827;
+            background-color: #111827;
             color: white;
-            padding: 22px 8%;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .logo {
-            font-size: 27px;
+            font-size: 28px;
             font-weight: bold;
         }
 
         .logo span {
-            color: #4da3ff;
+            color: #38bdf8;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 25px;
-            font-size: 15px;
         }
 
         nav a:hover {
-            color: #4da3ff;
+            color: #38bdf8;
         }
 
-        .hero {
-            min-height: 520px;
-            display: flex;
-            align-items: center;
-            padding: 70px 8%;
-            background: linear-gradient(120deg, #101827, #19345c);
+        .inicio {
+            background: linear-gradient(135deg, #111827, #1e40af);
             color: white;
+            padding: 100px 8%;
         }
 
-        .hero-content {
-            max-width: 750px;
+        .inicio h1 {
+            font-size: 52px;
+            max-width: 700px;
+            margin-bottom: 20px;
         }
 
-        .hero h1 {
-            font-size: 55px;
-            line-height: 1.1;
-            margin-bottom: 25px;
+        .inicio h1 span {
+            color: #38bdf8;
         }
 
-        .hero h1 span {
-            color: #4da3ff;
-        }
-
-        .hero p {
+        .inicio p {
+            max-width: 700px;
             font-size: 19px;
             line-height: 1.7;
-            color: #d9e4f2;
+            color: #dbeafe;
             margin-bottom: 30px;
         }
 
         .botao {
             display: inline-block;
-            background: #4da3ff;
-            color: white;
-            text-decoration: none;
+            background-color: #38bdf8;
+            color: #111827;
             padding: 14px 25px;
             border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
         }
 
         .botao:hover {
-            background: #3188df;
+            background-color: white;
         }
 
         section {
@@ -105,16 +90,16 @@
 
         .titulo {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .titulo h2 {
-            font-size: 34px;
-            margin-bottom: 12px;
+            font-size: 35px;
+            margin-bottom: 10px;
         }
 
         .titulo p {
-            color: #657083;
+            color: #64748b;
             font-size: 17px;
         }
 
@@ -125,33 +110,27 @@
         }
 
         .card {
-            background: white;
+            background-color: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .card:hover {
-            transform: translateY(-7px);
-        }
-
-        .card-topo {
+        .imagem {
             height: 170px;
+            background-color: #1e3a8a;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: #172b49;
-            color: white;
-            font-size: 60px;
+            align-items: center;
+            font-size: 65px;
         }
 
-        .card-conteudo {
+        .conteudo {
             padding: 25px;
         }
 
         .categoria {
-            color: #3188df;
+            color: #2563eb;
             font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
@@ -163,34 +142,34 @@
         }
 
         .card p {
-            color: #657083;
+            color: #64748b;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
         .leia {
-            color: #3188df;
+            color: #2563eb;
             text-decoration: none;
             font-weight: bold;
         }
 
         .sobre {
-            background: white;
-        }
-
-        .sobre-conteudo {
-            max-width: 900px;
-            margin: auto;
+            background-color: white;
             text-align: center;
         }
 
-        .sobre-conteudo h2 {
-            font-size: 34px;
+        .sobre div {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .sobre h2 {
+            font-size: 35px;
             margin-bottom: 20px;
         }
 
-        .sobre-conteudo p {
-            color: #596577;
+        .sobre p {
+            color: #64748b;
             line-height: 1.8;
             font-size: 17px;
         }
@@ -203,35 +182,36 @@
         }
 
         .tecnologia {
-            background: #f4f7fb;
-            padding: 25px 15px;
+            background-color: #f4f6f8;
+            padding: 25px;
             border-radius: 10px;
             text-align: center;
         }
 
         .tecnologia .icone {
-            font-size: 38px;
-            margin-bottom: 12px;
+            font-size: 40px;
+            margin-bottom: 15px;
         }
 
         .tecnologia h3 {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .tecnologia p {
-            color: #657083;
+            color: #64748b;
             font-size: 14px;
+            line-height: 1.5;
         }
 
         .futuro {
-            background: #101827;
+            background-color: #111827;
             color: white;
+            text-align: center;
         }
 
-        .futuro-conteudo {
-            max-width: 950px;
+        .futuro div {
+            max-width: 850px;
             margin: auto;
-            text-align: center;
         }
 
         .futuro h2 {
@@ -240,44 +220,34 @@
         }
 
         .futuro p {
-            color: #d4deeb;
+            color: #dbeafe;
             line-height: 1.8;
             font-size: 17px;
         }
 
         footer {
-            background: #0a101b;
-            color: #aeb9c8;
+            background-color: #0b1120;
+            color: #94a3b8;
             text-align: center;
-            padding: 30px 8%;
+            padding: 30px;
         }
 
         footer strong {
             color: white;
         }
 
-        @media (max-width: 900px) {
-            .artigos {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .tecnologias {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             header {
                 flex-direction: column;
-                gap: 15px;
+                gap: 20px;
             }
 
             nav a {
-                margin: 0 7px;
+                margin: 0 8px;
+            }
+
+            .inicio h1 {
+                font-size: 40px;
             }
 
             .artigos {
@@ -285,15 +255,21 @@
             }
 
             .tecnologias {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .tecnologias {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
+            .inicio {
                 text-align: center;
             }
 
-            .hero h1 {
-                font-size: 38px;
+            .inicio h1 {
+                font-size: 34px;
             }
         }
     </style>
@@ -302,111 +278,116 @@
 <body>
 
     <header>
-        <div class="logo">Tech<span>Vision</span></div>
+        <div class="logo">
+            Tech<span>Vision</span>
+        </div>
 
         <nav>
             <a href="#inicio">Início</a>
             <a href="#artigos">Artigos</a>
-            <a href="#tecnologia">Tecnologias</a>
+            <a href="#tecnologias">Tecnologias</a>
             <a href="#sobre">Sobre</a>
         </nav>
     </header>
 
-    <main>
+    <section class="inicio" id="inicio">
+        <h1>
+            Tecnologia que transforma o <span>futuro</span>
+        </h1>
 
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <h1>O futuro da <span>tecnologia</span> começa hoje.</h1>
+        <p>
+            Bem-vindo ao TechVision, um blog criado para apresentar
+            informações sobre tecnologia, inteligência artificial,
+            computadores, internet e as principais inovações que fazem
+            parte do nosso cotidiano.
+        </p>
 
-                <p>
-                    Descubra como a inteligência artificial, os computadores,
-                    a internet e as novas tecnologias estão transformando
-                    a maneira como vivemos, estudamos e trabalhamos.
-                </p>
+        <a href="#artigos" class="botao">Explorar o blog</a>
+    </section>
 
-                <a href="#artigos" class="botao">Explorar artigos</a>
+    <section id="artigos">
+
+        <div class="titulo">
+            <h2>Artigos em destaque</h2>
+            <p>Conheça alguns dos principais assuntos da tecnologia.</p>
+        </div>
+
+        <div class="artigos">
+
+            <div class="card">
+                <div class="imagem">🤖</div>
+
+                <div class="conteudo">
+                    <span class="categoria">Inteligência Artificial</span>
+
+                    <h3>O crescimento da inteligência artificial</h3>
+
+                    <p>
+                        A inteligência artificial está cada vez mais presente
+                        em nossas vidas. Ela pode ser encontrada em celulares,
+                        computadores, aplicativos e empresas.
+                    </p>
+
+                    <a href="#tecnologias" class="leia">Saiba mais →</a>
+                </div>
             </div>
-        </section>
 
-        <section id="artigos">
-            <div class="titulo">
-                <h2>Artigos em destaque</h2>
-                <p>Conteúdos para entender melhor o mundo tecnológico.</p>
+            <div class="card">
+                <div class="imagem">💻</div>
+
+                <div class="conteudo">
+                    <span class="categoria">Computadores</span>
+
+                    <h3>A evolução dos computadores</h3>
+
+                    <p>
+                        Os computadores evoluíram muito ao longo das décadas.
+                        Atualmente, máquinas pequenas conseguem realizar
+                        tarefas que antes exigiam equipamentos enormes.
+                    </p>
+
+                    <a href="#tecnologias" class="leia">Saiba mais →</a>
+                </div>
             </div>
 
-            <div class="artigos">
+            <div class="card">
+                <div class="imagem">🌐</div>
 
-                <article class="card">
-                    <div class="card-topo">🤖</div>
+                <div class="conteudo">
+                    <span class="categoria">Internet</span>
 
-                    <div class="card-conteudo">
-                        <span class="categoria">Inteligência Artificial</span>
+                    <h3>Como a internet mudou nossas vidas</h3>
 
-                        <h3>Como a inteligência artificial está mudando o mundo?</h3>
+                    <p>
+                        A internet transformou a comunicação, os estudos,
+                        o trabalho e o acesso à informação em todo o mundo.
+                    </p>
 
-                        <p>
-                            A inteligência artificial já está presente em
-                            celulares, computadores, empresas, escolas e
-                            diversos outros setores da sociedade.
-                        </p>
-
-                        <a href="#tecnologia" class="leia">Leia mais →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-topo">💻</div>
-
-                    <div class="card-conteudo">
-                        <span class="categoria">Computadores</span>
-
-                        <h3>A evolução dos computadores</h3>
-
-                        <p>
-                            Os computadores passaram de enormes máquinas
-                            utilizadas por poucas pessoas para dispositivos
-                            extremamente rápidos e acessíveis.
-                        </p>
-
-                        <a href="#tecnologia" class="leia">Leia mais →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-topo">🌐</div>
-
-                    <div class="card-conteudo">
-                        <span class="categoria">Internet</span>
-
-                        <h3>Por que a internet é tão importante?</h3>
-
-                        <p>
-                            A internet revolucionou a comunicação e tornou
-                            possível acessar informações, estudar e trabalhar
-                            de praticamente qualquer lugar.
-                        </p>
-
-                        <a href="#tecnologia" class="leia">Leia mais →</a>
-                    </div>
-                </article>
-
+                    <a href="#tecnologias" class="leia">Saiba mais →</a>
+                </div>
             </div>
-        </section>
 
-        <section class="sobre" id="tecnologia">
-            <div class="titulo">
-                <h2>Tecnologias que fazem parte do nosso cotidiano</h2>
-                <p>Algumas das principais áreas que estão transformando nossa sociedade.</p>
-            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="tecnologias">
+
+        <div>
+            <h2>Principais tecnologias</h2>
+
+            <p>
+                Existem diversas tecnologias que estão transformando a
+                sociedade e criando novas possibilidades para o futuro.
+            </p>
 
             <div class="tecnologias">
 
                 <div class="tecnologia">
                     <div class="icone">🤖</div>
-                    <h3>IA</h3>
+                    <h3>Inteligência Artificial</h3>
                     <p>
-                        Sistemas capazes de analisar informações e realizar
-                        tarefas que normalmente exigiriam inteligência humana.
+                        Sistemas capazes de analisar informações,
+                        aprender padrões e realizar diferentes tarefas.
                     </p>
                 </div>
 
@@ -414,8 +395,8 @@
                     <div class="icone">📱</div>
                     <h3>Smartphones</h3>
                     <p>
-                        Dispositivos que reúnem comunicação, entretenimento,
-                        trabalho e acesso à internet em um único aparelho.
+                        Dispositivos que reúnem comunicação, aplicativos,
+                        câmera, internet e entretenimento.
                     </p>
                 </div>
 
@@ -423,8 +404,8 @@
                     <div class="icone">☁️</div>
                     <h3>Computação em nuvem</h3>
                     <p>
-                        Permite armazenar dados e utilizar serviços pela
-                        internet sem depender apenas do computador pessoal.
+                        Tecnologia que permite armazenar dados e utilizar
+                        serviços pela internet.
                     </p>
                 </div>
 
@@ -432,48 +413,55 @@
                     <div class="icone">🔐</div>
                     <h3>Segurança digital</h3>
                     <p>
-                        Conjunto de técnicas utilizadas para proteger dados,
-                        sistemas e usuários contra ameaças digitais.
+                        Técnicas utilizadas para proteger informações,
+                        contas e sistemas contra ameaças digitais.
                     </p>
                 </div>
 
             </div>
-        </section>
+        </div>
 
-        <section class="futuro">
-            <div class="futuro-conteudo">
-                <h2>O que podemos esperar do futuro?</h2>
+    </section>
 
-                <p>
-                    A tecnologia continua evoluindo rapidamente. Novas formas
-                    de inteligência artificial, robótica, realidade virtual,
-                    computação e comunicação podem transformar ainda mais a
-                    sociedade nos próximos anos. Por isso, entender tecnologia
-                    também significa estar preparado para o futuro.
-                </p>
-            </div>
-        </section>
+    <section class="futuro">
 
-        <section id="sobre">
-            <div class="sobre-conteudo">
-                <h2>Sobre o TechVision</h2>
+        <div>
+            <h2>O futuro da tecnologia</h2>
 
-                <p>
-                    O TechVision é um blog criado para apresentar informações
-                    sobre tecnologia de forma simples e acessível. O objetivo
-                    é mostrar como as inovações tecnológicas estão presentes
-                    em nosso cotidiano e como elas podem influenciar o futuro.
-                </p>
-            </div>
-        </section>
+            <p>
+                A tecnologia continua evoluindo rapidamente. Inteligência
+                artificial, robótica, realidade virtual, novos computadores
+                e outras inovações podem transformar ainda mais a maneira
+                como estudamos, trabalhamos e nos relacionamos.
+            </p>
+        </div>
 
-    </main>
+    </section>
+
+    <section class="sobre" id="sobre">
+
+        <div>
+            <h2>Sobre o TechVision</h2>
+
+            <p>
+                O TechVision é um blog escolar criado para apresentar
+                informações sobre tecnologia de maneira simples e acessível.
+                O objetivo é mostrar como as novas tecnologias fazem parte
+                do nosso cotidiano e podem influenciar o futuro.
+            </p>
+        </div>
+
+    </section>
 
     <footer>
-        <p>© 2026 <strong>TechVision</strong> — Blog de Tecnologia</p>
-        <p>Projeto escolar desenvolvido em HTML e CSS.</p>
+        <p>
+            © 2026 <strong>TechVision</strong> - Blog de Tecnologia
+        </p>
+
+        <p>
+            Projeto escolar desenvolvido em HTML e CSS.
+        </p>
     </footer>
 
 </body>
 </html>
-```
