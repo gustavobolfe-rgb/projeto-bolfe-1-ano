@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fórmula 1</title>
+    <title>Meio Ambiente</title>
 
     <style>
         * {
@@ -16,29 +16,29 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #eeeeee;
+            background-color: #eef7ee;
             color: #222222;
         }
 
         header {
-            background-color: #111111;
+            background-color: #1b5e20;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 40px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 48px;
+            font-size: 45px;
         }
 
         header p {
-            font-size: 20px;
+            font-size: 19px;
             margin-bottom: 0;
         }
 
         nav {
-            background-color: #e10600;
+            background-color: #2e7d32;
             padding: 16px;
             text-align: center;
         }
@@ -68,7 +68,7 @@
         }
 
         h2 {
-            color: #e10600;
+            color: #2e7d32;
             margin-top: 0;
         }
 
@@ -88,7 +88,7 @@
         .card {
             flex: 1;
             min-width: 250px;
-            background-color: #f5f5f5;
+            background-color: #f1f8f1;
             border-radius: 10px;
             overflow: hidden;
         }
@@ -104,7 +104,7 @@
         }
 
         .card h3 {
-            color: #e10600;
+            color: #2e7d32;
             margin-top: 0;
         }
 
@@ -118,31 +118,39 @@
             flex: 1;
             min-width: 230px;
             padding: 20px;
-            background-color: #fff1f1;
-            border-left: 5px solid #e10600;
+            background-color: #f1f8f1;
+            border-left: 5px solid #2e7d32;
             border-radius: 8px;
         }
 
         .curiosidade h3 {
-            color: #e10600;
+            color: #2e7d32;
             margin-top: 0;
         }
 
-        .equipes {
+        .acoes {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 15px;
         }
 
-        .equipe {
-            background-color: #f3f3f3;
-            padding: 15px;
+        .acao {
+            background-color: #e8f5e9;
+            padding: 18px;
             border-radius: 8px;
-            font-weight: bold;
+        }
+
+        .acao h3 {
+            margin-top: 0;
+            color: #1b5e20;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         footer {
-            background-color: #111111;
+            background-color: #1b5e20;
             color: white;
             text-align: center;
             padding: 25px;
@@ -151,7 +159,7 @@
         @media (max-width: 700px) {
 
             header h1 {
-                font-size: 35px;
+                font-size: 34px;
             }
 
             nav a {
@@ -163,7 +171,7 @@
                 height: 250px;
             }
 
-            .equipes {
+            .acoes {
                 grid-template-columns: 1fr;
             }
         }
@@ -173,62 +181,61 @@
 <body>
 
     <header>
-        <h1>🏎️ FÓRMULA 1</h1>
-        <p>Velocidade • Tecnologia • Competição</p>
+        <h1>🌎 MEIO AMBIENTE</h1>
+        <p>Conhecer, preservar e cuidar do nosso planeta</p>
     </header>
 
     <nav>
         <a href="#inicio">Início</a>
-        <a href="#pilotos">Pilotos</a>
-        <a href="#equipes">Equipes</a>
+        <a href="#natureza">Natureza</a>
+        <a href="#problemas">Problemas</a>
         <a href="#curiosidades">Curiosidades</a>
-        <a href="#historia">História</a>
+        <a href="#preservacao">Preservação</a>
     </nav>
 
     <main>
 
         <section id="inicio">
 
-            <h2>🏁 O que é a Fórmula 1?</h2>
+            <h2>🌱 O que é o meio ambiente?</h2>
 
             <img
                 class="imagem-principal"
-                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ferrari_F1_Car_%2855293485666%29.jpg"
-                alt="Carro de Fórmula 1 da Ferrari">
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+                alt="Floresta">
 
             <p>
-                A Fórmula 1 é a principal categoria do automobilismo
-                internacional. Pilotos e equipes competem em circuitos
-                espalhados pelo mundo.
+                O meio ambiente é formado por todos os elementos naturais
+                e pelos seres vivos que fazem parte do planeta.
             </p>
 
             <p>
-                A categoria combina velocidade, tecnologia, engenharia,
-                estratégia e habilidade dos pilotos.
+                Florestas, rios, oceanos, animais, plantas, solo e atmosfera
+                fazem parte do meio ambiente e estão ligados uns aos outros.
             </p>
 
         </section>
 
 
-        <section id="pilotos">
+        <section id="natureza">
 
-            <h2>🏆 Pilotos que fizeram história</h2>
+            <h2>🌳 A natureza</h2>
 
             <div class="cards">
 
                 <div class="card">
 
                     <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_1993_McLaren-Ford_MP4_8_Formula_1_racing_car%2C_driven_by_Ayrton_Senna_%2814478902510%29.jpg"
-                        alt="McLaren de Ayrton Senna">
+                        src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80"
+                        alt="Floresta">
 
                     <div class="card-conteudo">
 
-                        <h3>Ayrton Senna</h3>
+                        <h3>🌳 Florestas</h3>
 
                         <p>
-                            Tricampeão mundial e um dos maiores ícones da
-                            história da Fórmula 1.
+                            As florestas abrigam uma enorme quantidade de
+                            espécies e ajudam a proteger o solo e o clima.
                         </p>
 
                     </div>
@@ -239,16 +246,16 @@
                 <div class="card">
 
                     <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ferrari_F1_Car_%2855293485666%29.jpg"
-                        alt="Carro de Fórmula 1 Ferrari">
+                        src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=800&q=80"
+                        alt="Rio">
 
                     <div class="card-conteudo">
 
-                        <h3>Lewis Hamilton</h3>
+                        <h3>💧 Água</h3>
 
                         <p>
-                            Sete vezes campeão mundial e um dos pilotos
-                            mais vitoriosos da história da categoria.
+                            A água é essencial para os seres vivos e participa
+                            de diversos processos naturais do planeta.
                         </p>
 
                     </div>
@@ -259,16 +266,16 @@
                 <div class="card">
 
                     <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mercedes_F1_Car_%2839361133945%29.jpg"
-                        alt="Carro de Fórmula 1 Mercedes">
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+                        alt="Montanhas">
 
                     <div class="card-conteudo">
 
-                        <h3>Max Verstappen</h3>
+                        <h3>🏔️ Paisagens naturais</h3>
 
                         <p>
-                            Campeão mundial e conhecido por sua velocidade,
-                            agressividade e habilidade nas corridas.
+                            Montanhas, florestas, desertos e outros ambientes
+                            possuem características e espécies próprias.
                         </p>
 
                     </div>
@@ -280,55 +287,40 @@
         </section>
 
 
-        <section id="equipes">
+        <section id="problemas">
 
-            <h2>🏎️ Equipes da Fórmula 1</h2>
+            <h2>⚠️ Problemas ambientais</h2>
 
             <p>
-                A Fórmula 1 possui equipes tradicionais e novas participantes.
-                Entre as principais estão:
+                Diversas atividades humanas podem causar impactos negativos
+                no meio ambiente.
             </p>
 
-            <div class="equipes">
-
-                <div class="equipe">🔴 Ferrari</div>
-
-                <div class="equipe">⚫ Mercedes</div>
-
-                <div class="equipe">🟠 McLaren</div>
-
-                <div class="equipe">🔵 Red Bull Racing</div>
-
-                <div class="equipe">🟢 Aston Martin</div>
-
-                <div class="equipe">🔵 Williams</div>
-
-                <div class="equipe">🔵 Alpine</div>
-
-                <div class="equipe">⚫ Haas</div>
-
-                <div class="equipe">⚪ Audi</div>
-
-                <div class="equipe">🔵 Cadillac</div>
-
-            </div>
+            <ul>
+                <li>Desmatamento.</li>
+                <li>Poluição do ar.</li>
+                <li>Poluição dos rios e oceanos.</li>
+                <li>Excesso de lixo.</li>
+                <li>Perda de biodiversidade.</li>
+                <li>Mudanças climáticas.</li>
+            </ul>
 
         </section>
 
 
         <section id="curiosidades">
 
-            <h2>🔎 Curiosidades sobre a F1</h2>
+            <h2>🔎 Curiosidades sobre o meio ambiente</h2>
 
             <div class="curiosidades">
 
                 <div class="curiosidade">
 
-                    <h3>🏁 1950</h3>
+                    <h3>🌳 Amazônia</h3>
 
                     <p>
-                        O primeiro Campeonato Mundial de Fórmula 1 aconteceu
-                        em 1950.
+                        A Amazônia é uma das regiões de maior biodiversidade
+                        do planeta.
                     </p>
 
                 </div>
@@ -336,11 +328,11 @@
 
                 <div class="curiosidade">
 
-                    <h3>⚡ Mais de 300 km/h</h3>
+                    <h3>🌊 Oceanos</h3>
 
                     <p>
-                        Os carros de F1 conseguem ultrapassar 300 km/h em
-                        determinados circuitos.
+                        Os oceanos cobrem aproximadamente 71% da superfície
+                        da Terra.
                     </p>
 
                 </div>
@@ -348,11 +340,11 @@
 
                 <div class="curiosidade">
 
-                    <h3>🔧 Pit Stop</h3>
+                    <h3>🐝 Polinizadores</h3>
 
                     <p>
-                        Uma equipe de F1 consegue trocar os quatro pneus
-                        de um carro em apenas alguns segundos.
+                        Abelhas, borboletas e outros animais ajudam na
+                        reprodução de muitas espécies de plantas.
                     </p>
 
                 </div>
@@ -360,10 +352,11 @@
 
                 <div class="curiosidade">
 
-                    <h3>🌎 24 corridas</h3>
+                    <h3>🌱 Plantas</h3>
 
                     <p>
-                        O calendário de 2026 possui 24 Grandes Prêmios.
+                        As plantas realizam fotossíntese e ajudam a retirar
+                        dióxido de carbono da atmosfera.
                     </p>
 
                 </div>
@@ -371,11 +364,11 @@
 
                 <div class="curiosidade">
 
-                    <h3>🏆 Ferrari</h3>
+                    <h3>🐋 Vida marinha</h3>
 
                     <p>
-                        A Ferrari participa continuamente da Fórmula 1
-                        desde a primeira temporada, em 1950.
+                        Os oceanos possuem uma enorme diversidade de animais,
+                        plantas e microrganismos.
                     </p>
 
                 </div>
@@ -383,11 +376,11 @@
 
                 <div class="curiosidade">
 
-                    <h3>⚙️ Tecnologia</h3>
+                    <h3>♻️ Reciclagem</h3>
 
                     <p>
-                        Um carro de F1 possui milhares de componentes e
-                        utiliza tecnologias extremamente avançadas.
+                        A reciclagem pode reduzir a quantidade de resíduos
+                        enviados para aterros e diminuir o uso de matérias-primas.
                     </p>
 
                 </div>
@@ -397,44 +390,76 @@
         </section>
 
 
-        <section id="historia">
+        <section id="preservacao">
 
-            <h2>📖 História da Fórmula 1</h2>
+            <h2>♻️ Como podemos ajudar?</h2>
 
-            <p>
-                O Campeonato Mundial de Fórmula 1 começou oficialmente
-                em 1950. A primeira corrida do campeonato aconteceu no
-                circuito de Silverstone, na Inglaterra.
-            </p>
+            <div class="acoes">
 
-            <p>
-                Ao longo das décadas, a categoria passou por grandes
-                mudanças. Os carros ficaram mais rápidos, seguros e
-                tecnologicamente avançados.
-            </p>
+                <div class="acao">
 
-            <p>
-                Grandes nomes como Juan Manuel Fangio, Jim Clark,
-                Ayrton Senna, Alain Prost, Michael Schumacher e
-                Lewis Hamilton ajudaram a construir a história da F1.
-            </p>
+                    <h3>♻️ Reciclar</h3>
+
+                    <p>
+                        Separar corretamente os resíduos ajuda a facilitar
+                        a reciclagem.
+                    </p>
+
+                </div>
+
+
+                <div class="acao">
+
+                    <h3>💧 Economizar água</h3>
+
+                    <p>
+                        Evitar desperdícios ajuda a preservar esse recurso
+                        essencial.
+                    </p>
+
+                </div>
+
+
+                <div class="acao">
+
+                    <h3>⚡ Economizar energia</h3>
+
+                    <p>
+                        Apagar luzes e desligar aparelhos quando não estão
+                        sendo utilizados evita desperdícios.
+                    </p>
+
+                </div>
+
+
+                <div class="acao">
+
+                    <h3>🌳 Preservar a natureza</h3>
+
+                    <p>
+                        Não jogar lixo em ambientes naturais e respeitar
+                        animais e plantas são atitudes importantes.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
 
         <section>
 
-            <h2>🚀 A F1 em 2026</h2>
+            <h2>🌍 O futuro do planeta</h2>
 
             <p>
-                A temporada de 2026 marca uma nova era técnica da Fórmula 1.
-                Os carros passaram por mudanças importantes na aerodinâmica,
-                no peso e nas unidades de potência.
+                A preservação ambiental depende de ações individuais,
+                empresas, governos e da sociedade como um todo.
             </p>
 
             <p>
-                As novas regras também introduziram maior participação
-                da energia elétrica e novos sistemas de aerodinâmica ativa.
+                Pequenas atitudes podem contribuir para reduzir impactos
+                ambientais e ajudar a construir um futuro mais sustentável.
             </p>
 
         </section>
@@ -444,7 +469,7 @@
 
     <footer>
 
-        <p>🏁 Site sobre Fórmula 1</p>
+        <p>🌎 Site sobre o Meio Ambiente</p>
         <p>Trabalho escolar</p>
 
     </footer>
