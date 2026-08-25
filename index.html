@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,47 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vida Marinha</title>
+    <title>Fórmula 1</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #e8f7ff;
-            color: #123;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eeeeee;
+            color: #222222;
         }
 
         header {
-            background-color: #006994;
+            background-color: #111111;
             color: white;
             text-align: center;
-            padding: 35px 20px;
+            padding: 45px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            font-size: 48px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
+            margin-bottom: 0;
         }
 
         nav {
-            background-color: #004f70;
+            background-color: #e10600;
+            padding: 16px;
             text-align: center;
-            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            margin: 0 15px;
         }
 
         nav a:hover {
-            color: #9de5ff;
+            text-decoration: underline;
         }
 
         main {
@@ -62,35 +68,43 @@
         }
 
         h2 {
-            color: #006994;
+            color: #e10600;
+            margin-top: 0;
         }
 
-        .animais {
+        .imagem-principal {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cards {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .animal {
-            background-color: #dff5ff;
-            border-radius: 12px;
-            overflow: hidden;
+        .card {
             flex: 1;
-            min-width: 220px;
+            min-width: 250px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .animal img {
+        .card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
         }
 
-        .animal-conteudo {
-            padding: 18px;
+        .card-conteudo {
+            padding: 20px;
         }
 
-        .animal h3 {
-            color: #00577a;
+        .card h3 {
+            color: #e10600;
             margin-top: 0;
         }
 
@@ -101,28 +115,57 @@
         }
 
         .curiosidade {
-            background-color: #f0fbff;
-            border-left: 5px solid #0099cc;
-            padding: 18px;
             flex: 1;
-            min-width: 220px;
+            min-width: 230px;
+            padding: 20px;
+            background-color: #fff1f1;
+            border-left: 5px solid #e10600;
             border-radius: 8px;
         }
 
         .curiosidade h3 {
-            color: #006994;
+            color: #e10600;
+            margin-top: 0;
         }
 
-        ul {
-            line-height: 1.8;
+        .equipes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .equipe {
+            background-color: #f3f3f3;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
         footer {
-            background-color: #004f70;
+            background-color: #111111;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .imagem-principal {
+                height: 250px;
+            }
+
+            .equipes {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -130,194 +173,283 @@
 <body>
 
     <header>
-        <h1>🌊 Vida Marinha</h1>
-        <p>Conheça a incrível vida dos oceanos</p>
+        <h1>🏎️ FÓRMULA 1</h1>
+        <p>Velocidade • Tecnologia • Competição</p>
     </header>
 
     <nav>
         <a href="#inicio">Início</a>
-        <a href="#animais">Animais</a>
+        <a href="#pilotos">Pilotos</a>
+        <a href="#equipes">Equipes</a>
         <a href="#curiosidades">Curiosidades</a>
-        <a href="#importancia">Importância</a>
-        <a href="#preservacao">Preservação</a>
+        <a href="#historia">História</a>
     </nav>
 
     <main>
 
         <section id="inicio">
-            <h2>O que é a vida marinha?</h2>
+
+            <h2>🏁 O que é a Fórmula 1?</h2>
+
+            <img
+                class="imagem-principal"
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ferrari_F1_Car_%2855293485666%29.jpg"
+                alt="Carro de Fórmula 1 da Ferrari">
 
             <p>
-                A vida marinha é formada por todos os seres vivos que habitam
-                os oceanos e outros ambientes de água salgada.
+                A Fórmula 1 é a principal categoria do automobilismo
+                internacional. Pilotos e equipes competem em circuitos
+                espalhados pelo mundo.
             </p>
 
             <p>
-                Os oceanos cobrem grande parte da superfície da Terra e
-                abrigam uma enorme diversidade de animais, plantas e
-                microorganismos.
+                A categoria combina velocidade, tecnologia, engenharia,
+                estratégia e habilidade dos pilotos.
             </p>
+
         </section>
 
-        <section id="animais">
-            <h2>🐠 Animais marinhos</h2>
 
-            <div class="animais">
+        <section id="pilotos">
 
-                <div class="animal">
+            <h2>🏆 Pilotos que fizeram história</h2>
 
-                    <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=800&q=80"
-                        alt="Tubarão nadando no oceano">
+            <div class="cards">
 
-                    <div class="animal-conteudo">
-                        <h3>🦈 Tubarão</h3>
+                <div class="card">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_1993_McLaren-Ford_MP4_8_Formula_1_racing_car%2C_driven_by_Ayrton_Senna_%2814478902510%29.jpg"
+                        alt="McLaren de Ayrton Senna">
+
+                    <div class="card-conteudo">
+
+                        <h3>Ayrton Senna</h3>
 
                         <p>
-                            Os tubarões são predadores importantes para o
-                            equilíbrio dos ecossistemas marinhos.
+                            Tricampeão mundial e um dos maiores ícones da
+                            história da Fórmula 1.
                         </p>
+
                     </div>
 
                 </div>
 
-                <div class="animal">
 
-                    <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=800&q=80"
-                        alt="Baleia no oceano">
+                <div class="card">
 
-                    <div class="animal-conteudo">
-                        <h3>🐋 Baleia</h3>
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ferrari_F1_Car_%2855293485666%29.jpg"
+                        alt="Carro de Fórmula 1 Ferrari">
+
+                    <div class="card-conteudo">
+
+                        <h3>Lewis Hamilton</h3>
 
                         <p>
-                            As baleias estão entre os maiores animais que
-                            já viveram no planeta.
+                            Sete vezes campeão mundial e um dos pilotos
+                            mais vitoriosos da história da categoria.
                         </p>
+
                     </div>
 
                 </div>
 
-                <div class="animal">
 
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-                        alt="Oceano e praia">
+                <div class="card">
 
-                    <div class="animal-conteudo">
-                        <h3>🐢 Tartaruga-marinha</h3>
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mercedes_F1_Car_%2839361133945%29.jpg"
+                        alt="Carro de Fórmula 1 Mercedes">
 
-                        <p>
-                            As tartarugas marinhas passam grande parte de
-                            suas vidas no oceano e realizam longas viagens.
-                        </p>
-                    </div>
+                    <div class="card-conteudo">
 
-                </div>
-
-                <div class="animal">
-
-                    <img src="https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=800&q=80"
-                        alt="Vida marinha no oceano">
-
-                    <div class="animal-conteudo">
-                        <h3>🐙 Polvo</h3>
+                        <h3>Max Verstappen</h3>
 
                         <p>
-                            Os polvos são animais muito inteligentes e
-                            conseguem utilizar a camuflagem para se esconder.
+                            Campeão mundial e conhecido por sua velocidade,
+                            agressividade e habilidade nas corridas.
                         </p>
+
                     </div>
 
                 </div>
 
             </div>
+
         </section>
+
+
+        <section id="equipes">
+
+            <h2>🏎️ Equipes da Fórmula 1</h2>
+
+            <p>
+                A Fórmula 1 possui equipes tradicionais e novas participantes.
+                Entre as principais estão:
+            </p>
+
+            <div class="equipes">
+
+                <div class="equipe">🔴 Ferrari</div>
+
+                <div class="equipe">⚫ Mercedes</div>
+
+                <div class="equipe">🟠 McLaren</div>
+
+                <div class="equipe">🔵 Red Bull Racing</div>
+
+                <div class="equipe">🟢 Aston Martin</div>
+
+                <div class="equipe">🔵 Williams</div>
+
+                <div class="equipe">🔵 Alpine</div>
+
+                <div class="equipe">⚫ Haas</div>
+
+                <div class="equipe">⚪ Audi</div>
+
+                <div class="equipe">🔵 Cadillac</div>
+
+            </div>
+
+        </section>
+
 
         <section id="curiosidades">
 
-            <h2>🔎 Curiosidades sobre a vida marinha</h2>
+            <h2>🔎 Curiosidades sobre a F1</h2>
 
             <div class="curiosidades">
 
                 <div class="curiosidade">
-                    <h3>🐋 A maior baleia</h3>
+
+                    <h3>🏁 1950</h3>
+
                     <p>
-                        A baleia-azul é o maior animal conhecido que já
-                        existiu na Terra.
+                        O primeiro Campeonato Mundial de Fórmula 1 aconteceu
+                        em 1950.
                     </p>
+
                 </div>
 
-                <div class="curiosidade">
-                    <h3>🐙 Inteligência do polvo</h3>
-                    <p>
-                        Polvos conseguem aprender, resolver problemas e
-                        utilizar diferentes estratégias para conseguir alimento.
-                    </p>
-                </div>
 
                 <div class="curiosidade">
-                    <h3>🦈 Dentes de tubarão</h3>
+
+                    <h3>⚡ Mais de 300 km/h</h3>
+
                     <p>
-                        Algumas espécies de tubarões podem substituir
-                        constantemente seus dentes ao longo da vida.
+                        Os carros de F1 conseguem ultrapassar 300 km/h em
+                        determinados circuitos.
                     </p>
+
                 </div>
 
+
                 <div class="curiosidade">
-                    <h3>🌊 Profundidade dos oceanos</h3>
+
+                    <h3>🔧 Pit Stop</h3>
+
                     <p>
-                        A maior parte do oceano ainda é pouco explorada,
-                        especialmente suas regiões mais profundas.
+                        Uma equipe de F1 consegue trocar os quatro pneus
+                        de um carro em apenas alguns segundos.
                     </p>
+
+                </div>
+
+
+                <div class="curiosidade">
+
+                    <h3>🌎 24 corridas</h3>
+
+                    <p>
+                        O calendário de 2026 possui 24 Grandes Prêmios.
+                    </p>
+
+                </div>
+
+
+                <div class="curiosidade">
+
+                    <h3>🏆 Ferrari</h3>
+
+                    <p>
+                        A Ferrari participa continuamente da Fórmula 1
+                        desde a primeira temporada, em 1950.
+                    </p>
+
+                </div>
+
+
+                <div class="curiosidade">
+
+                    <h3>⚙️ Tecnologia</h3>
+
+                    <p>
+                        Um carro de F1 possui milhares de componentes e
+                        utiliza tecnologias extremamente avançadas.
+                    </p>
+
                 </div>
 
             </div>
 
         </section>
 
-        <section id="importancia">
 
-            <h2>🌎 Por que os oceanos são importantes?</h2>
+        <section id="historia">
+
+            <h2>📖 História da Fórmula 1</h2>
 
             <p>
-                Os oceanos são fundamentais para a vida na Terra. Eles
-                ajudam a regular o clima, participam do ciclo da água e
-                fornecem alimento e recursos para milhões de pessoas.
+                O Campeonato Mundial de Fórmula 1 começou oficialmente
+                em 1950. A primeira corrida do campeonato aconteceu no
+                circuito de Silverstone, na Inglaterra.
             </p>
 
             <p>
-                Além disso, os ambientes marinhos abrigam uma enorme
-                biodiversidade e são importantes para o equilíbrio do planeta.
+                Ao longo das décadas, a categoria passou por grandes
+                mudanças. Os carros ficaram mais rápidos, seguros e
+                tecnologicamente avançados.
+            </p>
+
+            <p>
+                Grandes nomes como Juan Manuel Fangio, Jim Clark,
+                Ayrton Senna, Alain Prost, Michael Schumacher e
+                Lewis Hamilton ajudaram a construir a história da F1.
             </p>
 
         </section>
 
-        <section id="preservacao">
 
-            <h2>♻️ Como preservar a vida marinha?</h2>
+        <section>
+
+            <h2>🚀 A F1 em 2026</h2>
 
             <p>
-                A poluição, o excesso de plástico, a pesca excessiva e a
-                destruição dos habitats são alguns dos problemas que ameaçam
-                os oceanos.
+                A temporada de 2026 marca uma nova era técnica da Fórmula 1.
+                Os carros passaram por mudanças importantes na aerodinâmica,
+                no peso e nas unidades de potência.
             </p>
 
-            <p>Algumas atitudes que ajudam na preservação:</p>
-
-            <ul>
-                <li>Evitar jogar lixo na natureza.</li>
-                <li>Reduzir o uso de plástico descartável.</li>
-                <li>Reciclar sempre que possível.</li>
-                <li>Não retirar animais da natureza.</li>
-                <li>Preservar praias, rios e oceanos.</li>
-            </ul>
+            <p>
+                As novas regras também introduziram maior participação
+                da energia elétrica e novos sistemas de aerodinâmica ativa.
+            </p>
 
         </section>
 
     </main>
 
+
     <footer>
-        <p>🌊 Site sobre Vida Marinha - Trabalho escolar</p>
+
+        <p>🏁 Site sobre Fórmula 1</p>
+        <p>Trabalho escolar</p>
+
     </footer>
 
 </body>
 
 </html>
+```
