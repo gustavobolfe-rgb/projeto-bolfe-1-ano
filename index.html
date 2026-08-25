@@ -3,45 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velocidade - Automobilismo</title>
+    <title>Automobilismo</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #111111;
-            color: #ffffff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
         }
 
         header {
-            background-color: #0b0b0b;
-            padding: 22px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #292929;
+            background: #222;
+            padding: 20px;
+            text-align: center;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
+        header h1 {
+            margin: 0;
             color: #e10600;
+        }
+
+        nav {
+            margin-top: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
+            margin: 0 15px;
         }
 
         nav a:hover {
@@ -49,288 +39,89 @@
         }
 
         .inicio {
-            min-height: 570px;
-            padding: 100px 8%;
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-                linear-gradient(120deg, #242424, #080808);
+            padding: 100px 20px;
+            text-align: center;
+            background: #1c1c1c;
         }
 
-        .inicio-conteudo {
-            max-width: 800px;
-        }
-
-        .inicio h1 {
-            font-size: 62px;
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        .inicio h1 span {
-            color: #e10600;
+        .inicio h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
         }
 
         .inicio p {
-            color: #d0d0d0;
-            font-size: 19px;
-            line-height: 1.7;
-            max-width: 700px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            color: #ccc;
         }
 
-        .botao {
-            display: inline-block;
-            background-color: #e10600;
-            color: white;
-            text-decoration: none;
-            padding: 15px 28px;
-            border-radius: 5px;
-            font-weight: bold;
+        .conteudo {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
         }
 
-        .botao:hover {
-            background-color: #b80500;
-        }
-
-        section {
-            padding: 75px 8%;
-        }
-
-        .titulo {
+        .conteudo h2 {
             text-align: center;
-            margin-bottom: 45px;
+            font-size: 35px;
+            margin-bottom: 40px;
         }
 
-        .titulo h2 {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
-
-        .titulo p {
-            color: #a5a5a5;
-            font-size: 17px;
-        }
-
-        .artigos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .cards {
+            display: flex;
             gap: 25px;
+            flex-wrap: wrap;
         }
 
         .card {
-            background-color: #1a1a1a;
-            border: 1px solid #292929;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #e10600;
-        }
-
-        .card-imagem {
-            height: 190px;
-            background-color: #252525;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 70px;
-        }
-
-        .card-conteudo {
+            background: #222;
             padding: 25px;
-        }
-
-        .categoria {
-            color: #e10600;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
+            flex: 1;
+            min-width: 250px;
+            border-radius: 10px;
         }
 
         .card h3 {
-            font-size: 22px;
-            margin: 12px 0;
+            color: #e10600;
+            font-size: 24px;
         }
 
         .card p {
-            color: #aaaaaa;
+            color: #ccc;
             line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .link {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .link:hover {
-            color: #e10600;
-        }
-
-        .categorias {
-            background-color: #181818;
-        }
-
-        .lista-categorias {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .categoria-box {
-            background-color: #222222;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 8px;
-            border: 1px solid #292929;
-        }
-
-        .categoria-box:hover {
-            border-color: #e10600;
-        }
-
-        .categoria-box .icone {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .categoria-box h3 {
-            margin-bottom: 10px;
-        }
-
-        .categoria-box p {
-            color: #999999;
-            font-size: 14px;
-            line-height: 1.5;
         }
 
         .historia {
-            background-color: #0d0d0d;
-        }
-
-        .historia-conteudo {
-            max-width: 900px;
-            margin: auto;
+            background: #1c1c1c;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .historia h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
+        .historia div {
+            max-width: 900px;
+            margin: auto;
         }
 
         .historia p {
-            color: #bcbcbc;
-            font-size: 17px;
-            line-height: 1.8;
-        }
-
-        .numeros {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .numero {
-            background-color: #1a1a1a;
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .numero h3 {
-            color: #e10600;
-            font-size: 35px;
-            margin-bottom: 8px;
-        }
-
-        .numero p {
-            font-size: 14px;
-        }
-
-        .sobre {
-            background-color: #181818;
-            text-align: center;
-        }
-
-        .sobre-conteudo {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .sobre h2 {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
-
-        .sobre p {
-            color: #aaaaaa;
+            color: #ccc;
             line-height: 1.8;
             font-size: 17px;
         }
 
         footer {
-            background-color: #080808;
-            padding: 30px 8%;
+            background: #080808;
+            padding: 30px;
             text-align: center;
-            color: #777777;
-            border-top: 1px solid #222222;
-        }
-
-        footer strong {
-            color: white;
-        }
-
-        @media (max-width: 900px) {
-
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .inicio h1 {
-                font-size: 48px;
-            }
-
-            .artigos {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .lista-categorias {
-                grid-template-columns: 1fr 1fr;
-            }
+            color: #888;
         }
 
         @media (max-width: 600px) {
-
-            .inicio {
-                text-align: center;
+            .inicio h2 {
+                font-size: 35px;
             }
 
-            .inicio h1 {
-                font-size: 38px;
-            }
-
-            .artigos {
-                grid-template-columns: 1fr;
-            }
-
-            .lista-categorias {
-                grid-template-columns: 1fr;
-            }
-
-            .numeros {
-                grid-template-columns: 1fr;
+            nav a {
+                display: block;
+                margin: 10px;
             }
         }
     </style>
@@ -339,230 +130,59 @@
 <body>
 
     <header>
-
-        <div class="logo">
-            VELOCIDADE<span>.</span>
-        </div>
+        <h1>VELOCIDADE</h1>
 
         <nav>
             <a href="#inicio">Início</a>
-            <a href="#artigos">Artigos</a>
             <a href="#categorias">Categorias</a>
             <a href="#historia">História</a>
         </nav>
-
     </header>
 
     <section class="inicio" id="inicio">
 
-        <div class="inicio-conteudo">
+        <h2>O mundo do automobilismo</h2>
 
-            <h1>
-                A paixão por <span>velocidade</span>
-            </h1>
-
-            <p>
-                Um espaço dedicado ao automobilismo, aos grandes carros,
-                às principais categorias e à história das competições
-                que transformaram o mundo das corridas.
-            </p>
-
-            <a href="#artigos" class="botao">
-                Explorar o site
-            </a>
-
-        </div>
+        <p>
+            Velocidade, tecnologia, estratégia e competição.
+        </p>
 
     </section>
 
-    <section id="artigos">
+    <section class="conteudo" id="categorias">
 
-        <div class="titulo">
+        <h2>Principais categorias</h2>
 
-            <h2>Em destaque</h2>
+        <div class="cards">
 
-            <p>
-                Conheça alguns dos principais assuntos do automobilismo.
-            </p>
-
-        </div>
-
-        <div class="artigos">
-
-            <article class="card">
-
-                <div class="card-imagem">
-                    🏎️
-                </div>
-
-                <div class="card-conteudo">
-
-                    <span class="categoria">
-                        Fórmula 1
-                    </span>
-
-                    <h3>
-                        A categoria mais famosa do automobilismo
-                    </h3>
-
-                    <p>
-                        A Fórmula 1 reúne alguns dos carros mais rápidos
-                        e tecnologicamente avançados do mundo, além de
-                        pilotos e equipes de diferentes países.
-                    </p>
-
-                    <a href="#categorias" class="link">
-                        Conhecer →
-                    </a>
-
-                </div>
-
-            </article>
-
-            <article class="card">
-
-                <div class="card-imagem">
-                    🏁
-                </div>
-
-                <div class="card-conteudo">
-
-                    <span class="categoria">
-                        Corridas
-                    </span>
-
-                    <h3>
-                        O que torna uma corrida emocionante?
-                    </h3>
-
-                    <p>
-                        Velocidade, estratégia, ultrapassagens e trabalho
-                        em equipe são alguns dos elementos que tornam
-                        uma competição de automobilismo tão interessante.
-                    </p>
-
-                    <a href="#historia" class="link">
-                        Descobrir →
-                    </a>
-
-                </div>
-
-            </article>
-
-            <article class="card">
-
-                <div class="card-imagem">
-                    🔧
-                </div>
-
-                <div class="card-conteudo">
-
-                    <span class="categoria">
-                        Tecnologia
-                    </span>
-
-                    <h3>
-                        A tecnologia por trás dos carros de corrida
-                    </h3>
-
-                    <p>
-                        Aerodinâmica, motores, pneus, freios e eletrônica
-                        são fundamentais para que um carro tenha o melhor
-                        desempenho possível nas pistas.
-                    </p>
-
-                    <a href="#categorias" class="link">
-                        Saiba mais →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <section class="categorias" id="categorias">
-
-        <div class="titulo">
-
-            <h2>Categorias do automobilismo</h2>
-
-            <p>
-                Existem diferentes tipos de competições ao redor do mundo.
-            </p>
-
-        </div>
-
-        <div class="lista-categorias">
-
-            <div class="categoria-box">
-
-                <div class="icone">
-                    🏎️
-                </div>
-
-                <h3>
-                    Fórmula 1
-                </h3>
+            <div class="card">
+                <h3>Fórmula 1</h3>
 
                 <p>
-                    Carros de alta performance e tecnologia competindo
-                    em circuitos de diversos países.
+                    A Fórmula 1 é uma das principais categorias do
+                    automobilismo mundial. Seus carros utilizam tecnologias
+                    avançadas e competem em circuitos de diversos países.
                 </p>
-
             </div>
 
-            <div class="categoria-box">
-
-                <div class="icone">
-                    🏆
-                </div>
-
-                <h3>
-                    Endurance
-                </h3>
+            <div class="card">
+                <h3>Rally</h3>
 
                 <p>
-                    Corridas de longa duração nas quais resistência,
-                    estratégia e confiabilidade são fundamentais.
+                    No rally, os pilotos enfrentam diferentes tipos de
+                    terrenos e condições. A precisão, o controle do carro
+                    e a estratégia são fundamentais.
                 </p>
-
             </div>
 
-            <div class="categoria-box">
-
-                <div class="icone">
-                    🚗
-                </div>
-
-                <h3>
-                    Turismo
-                </h3>
+            <div class="card">
+                <h3>Endurance</h3>
 
                 <p>
-                    Competições com carros derivados de modelos
-                    utilizados nas ruas.
+                    As corridas de endurance podem durar várias horas.
+                    Nesse tipo de competição, resistência, estratégia e
+                    confiabilidade são essenciais.
                 </p>
-
-            </div>
-
-            <div class="categoria-box">
-
-                <div class="icone">
-                    🏜️
-                </div>
-
-                <h3>
-                    Rally
-                </h3>
-
-                <p>
-                    Corridas realizadas em diferentes tipos de terreno,
-                    exigindo habilidade e precisão dos pilotos.
-                </p>
-
             </div>
 
         </div>
@@ -571,82 +191,28 @@
 
     <section class="historia" id="historia">
 
-        <div class="historia-conteudo">
+        <div>
 
-            <h2>
-                A história do automobilismo
-            </h2>
+            <h2>História do automobilismo</h2>
 
             <p>
-                O automobilismo surgiu com o desenvolvimento dos primeiros
-                automóveis. As primeiras competições tinham como objetivo
-                testar a velocidade e a confiabilidade dos veículos.
-                Com o passar do tempo, as corridas se tornaram cada vez
-                mais organizadas e deram origem a diversas categorias.
-                Atualmente, o automobilismo também é um importante campo
-                de desenvolvimento tecnológico para a indústria automotiva.
+                O automobilismo começou a se desenvolver junto com a
+                evolução dos primeiros automóveis. As primeiras corridas
+                serviam para testar a velocidade e a resistência dos
+                veículos.
             </p>
 
-            <div class="numeros">
-
-                <div class="numero">
-
-                    <h3>
-                        1950
-                    </h3>
-
-                    <p>
-                        Ano da primeira temporada oficial do Campeonato
-                        Mundial de Fórmula 1.
-                    </p>
-
-                </div>
-
-                <div class="numero">
-
-                    <h3>
-                        F1
-                    </h3>
-
-                    <p>
-                        Uma das categorias mais conhecidas do automobilismo
-                        mundial.
-                    </p>
-
-                </div>
-
-                <div class="numero">
-
-                    <h3>
-                        4 rodas
-                    </h3>
-
-                    <p>
-                        A combinação entre engenharia, velocidade e
-                        habilidade presente nas principais categorias.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="sobre">
-
-        <div class="sobre-conteudo">
-
-            <h2>
-                Sobre o projeto
-            </h2>
+            <p>
+                Com o passar dos anos, as competições ficaram mais
+                organizadas e surgiram diversas categorias. A tecnologia
+                desenvolvida nas pistas também passou a influenciar os
+                carros utilizados nas ruas.
+            </p>
 
             <p>
-                Este site foi desenvolvido como um projeto escolar sobre
-                automobilismo. O objetivo é apresentar de maneira simples
-                algumas categorias, características e aspectos históricos
-                das corridas de carros.
+                Atualmente, o automobilismo combina engenharia, tecnologia,
+                estratégia e habilidade dos pilotos, atraindo milhões de
+                pessoas ao redor do mundo.
             </p>
 
         </div>
@@ -655,13 +221,9 @@
 
     <footer>
 
-        <p>
-            © 2026 <strong>Velocidade</strong> — Projeto escolar
-        </p>
+        <p>Projeto escolar sobre automobilismo</p>
 
-        <p>
-            Desenvolvido em HTML e CSS.
-        </p>
+        <p>Desenvolvido em HTML e CSS</p>
 
     </footer>
 
