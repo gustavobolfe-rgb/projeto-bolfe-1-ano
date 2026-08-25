@@ -1,15 +1,417 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>F1 Racing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F1 Racing - Blog de Fórmula 1</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            color: #222222;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background-color: #111111;
+            padding: 20px;
+        }
+
+        .menu {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e10600;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #e10600;
+        }
+
+        /* BANNER */
+
+        .banner {
+            background-color: #e10600;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        /* CONTEÚDO */
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .titulo {
+            border-left: 5px solid #e10600;
+            padding-left: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* NOTÍCIAS */
+
+        .noticias {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 33.33%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        .foto {
+            height: 160px;
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+        }
+
+        .card-conteudo {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555555;
+            line-height: 1.5;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            background-color: white;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        .sobre h2 {
+            margin-bottom: 15px;
+        }
+
+        .sobre p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        /* EQUIPES */
+
+        .equipes {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .equipe {
+            flex: 1;
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 700px) {
+
+            .menu {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+
+            .banner h1 {
+                font-size: 38px;
+            }
+
+            .noticias {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .equipes {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-    <h1>F1 Racing</h1>
+    <!-- MENU -->
 
-    <p>Site sobre Fórmula 1</p>
+    <header>
+
+        <div class="menu">
+
+            <div class="logo">
+                F1 <span>RACING</span>
+            </div>
+
+            <nav>
+
+                <a href="#inicio">Início</a>
+
+                <a href="#noticias">Notícias</a>
+
+                <a href="#equipes">Equipes</a>
+
+                <a href="#sobre">Sobre</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNER -->
+
+    <section class="banner" id="inicio">
+
+        <h1>FÓRMULA 1</h1>
+
+        <p>
+            Velocidade, tecnologia e competição.
+        </p>
+
+    </section>
+
+
+    <!-- NOTÍCIAS -->
+
+    <main class="container" id="noticias">
+
+        <h2 class="titulo">
+            Notícias do Automobilismo
+        </h2>
+
+
+        <div class="noticias">
+
+
+            <div class="card">
+
+                <div class="foto">
+                    🏎️
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        A Fórmula 1
+                    </h3>
+
+                    <p>
+                        A Fórmula 1 é uma das principais categorias
+                        do automobilismo mundial e reúne pilotos e
+                        equipes de diferentes países.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="foto">
+                    🏁
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        As pistas
+                    </h3>
+
+                    <p>
+                        Os Grandes Prêmios acontecem em circuitos
+                        famosos como Monza, Silverstone, Suzuka e
+                        Interlagos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="foto">
+                    ⚙️
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        Tecnologia
+                    </h3>
+
+                    <p>
+                        Os carros utilizam tecnologias avançadas
+                        para melhorar o desempenho, a segurança
+                        e a eficiência.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SOBRE -->
+
+        <section class="sobre" id="sobre">
+
+            <h2>
+                Sobre a Fórmula 1
+            </h2>
+
+            <p>
+                A Fórmula 1 é uma categoria de automobilismo
+                conhecida por seus carros de alta velocidade,
+                tecnologia avançada e grandes disputas entre
+                pilotos e equipes.
+            </p>
+
+            <br>
+
+            <p>
+                Durante uma temporada, os pilotos participam
+                de diversas corridas. Os resultados de cada
+                corrida geram pontos para os campeonatos de
+                pilotos e construtores.
+            </p>
+
+        </section>
+
+
+        <!-- EQUIPES -->
+
+        <section class="sobre" id="equipes">
+
+            <h2>
+                Equipes conhecidas
+            </h2>
+
+            <div class="equipes">
+
+                <div class="equipe">
+                    Ferrari
+                </div>
+
+                <div class="equipe">
+                    McLaren
+                </div>
+
+                <div class="equipe">
+                    Mercedes
+                </div>
+
+                <div class="equipe">
+                    Red Bull
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            F1 Racing
+        </p>
+
+        <p>
+            Projeto escolar sobre Fórmula 1
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>
